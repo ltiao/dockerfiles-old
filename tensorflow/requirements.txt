@@ -1,0 +1,6 @@
+Keras
+pydot
+graphviz
+seaborn
+
+tensorflow-probability-gpu
