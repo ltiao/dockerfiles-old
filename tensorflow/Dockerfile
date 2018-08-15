@@ -1,10 +1,13 @@
 FROM tensorflow/tensorflow:1.10.0-gpu-py3
 MAINTAINER Louis Tiao <louistiao@me.com>
 
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 RUN apt-get update && apt-get install -y --no-install-recommends \
         texlive-full \
-        mstxtcorefonts \
+        msttcorefonts \
         graphviz \
         && \
     apt-get clean && \
